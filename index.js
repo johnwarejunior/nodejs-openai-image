@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: false }));
 // Set static folder
 app.use(express.json(path.join(__dirname, 'public')));
 
-
+app.get('/nodejs-openai-image', function (req, res) {
+    res.send('index', {});
+  });
 
 
 app.use('/openai', require('./routes/openaiRoutes'));
